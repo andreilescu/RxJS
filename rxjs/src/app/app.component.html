@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <span>{{title}}</span>
+</mat-toolbar>
+
+<mat-sidenav-container class="container-custom">
+  <div class="sidenav-content">
+
+    <button mat-icon-button (click)="sidenav.open()">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <router-outlet></router-outlet>
+
+  </div>
+
+  <mat-sidenav #sidenav class="sidenav">
+    <mat-nav-list>
+      <a mat-list-item routerLink="observable" (click)="sidenav.close()">Observables</a>
+    </mat-nav-list>
+  </mat-sidenav>
+</mat-sidenav-container>
+
+
